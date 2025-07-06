@@ -2,6 +2,14 @@
 Proyek IoT untuk keselamatan pekerja konstruksi sebelum masuk ke area dilakukan scan melalui
 portal website yang telah kami buat dengan menggunakan algoritma YOLO
 
+---
+
+# Tech Stack
+- Arduino Uno R4 WiFi
+- Backend Framework Flask
+- AI Algoritma YOLO
+- Motor Servo GS90
+
 ## Instalasi
 1. Clone Proyek ini di Aplikasi Editor Code kesayangan anda
 ```bash
