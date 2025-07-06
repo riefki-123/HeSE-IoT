@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real-time YOLOv5 Personal Protective Equipment monitoring system">
+    <title>RIOT HQ - HeSE (Health Safety Environment Scanner)</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loading-overlay" id="loading-overlay" aria-hidden="true">
+        <div class="loading-spinner"></div>
+        <p class="loading-text">Inisiasi Sistem</p>
+    </div>
+
+    <header class="header">
+        <div class="header-content">
+            <h1 class="title">
+                <span class="title-icon">🛡️</span>
+                RIOT - Health Safety Environment Scanner
+            </h1>
+            <div class="connection-indicator" id="connection-indicator">
+                <span class="indicator-dot"></span>
+                <span class="indicator-text">Terhubung</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="monitoring-container">
+            <section class="video-section" aria-label="Live video feed">
+                <div class="video-wrapper">
+                    <img 
+                        id="video-stream" 
+                        class="video-stream" 
+                        src="{{ url_for('video_feed') }}" 
+                        alt="Live video feed showing PPE detection"
+                        loading="lazy"
+                        onerror="handleVideoError()"
+                    >
+                    <div class="video-overlay" id="video-overlay">
+                        <div class="video-error">
+                            <span class="error-icon">⚠️</span>
+                            <p>Video Tidak Ada</p>
+                            <button onclick="reloadVideo()" class="retry-button">Retry</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="status-section" aria-label="Detection status">
+                <div class="status-header">
+                    <h2>Detection Status</h2>
+                    <div class="status-timestamp" id="status-timestamp"></div>
+                </div>
+                
+                <div id="status-display" class="status-box status-initializing" role="status" aria-live="polite">
+                    <span class="status-icon">🔄</span>
+                    <span class="status-text">INISIASI</span>
+                </div>
+
+                <div class="status-legend">
+                    <h3>Indikator Status</h3>
+                    <div class="legend-grid">
+                        <div class="legend-item">
+                            <div class="legend-color status-complete"></div>
+                            <span>COMPLETE</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color status-no_vest"></div>
+                            <span>NO VEST</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color status-no_helmet"></div>
+                            <span>NO HELMET</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color status-no_equipment"></div>
+                            <span>NO EQUIPMENT</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 RIOT - Health Safety Environment Scanner</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
