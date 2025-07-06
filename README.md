@@ -26,5 +26,16 @@ pip install -r requirements.txt
 ## Kontribusi
 Kami terbuka untuk Pull request. Untuk perubahan, pertama silahkan buka sebuah issue terlebih dahulu untuk melakukan diskusi apa yang kamu ingin ubah.
 
-## License
-[MIT]
+## Screenshot
+<div align="center">
+  
+[![No Helmet](screenshot/nohelmet.png)]
+Atribut Tidak Lengkap (No Helmet)
+[![No Vest](screenshot/novest.png)]
+Atribut Tidak Lengkap (No Vest)
+[![No Attribute](screenshot/no_atribute.png)]
+Atribut Tidak Lengkap (No Atribut)
+[![No Helmet](screenshot/atributlengkap.png)]
+Atribut Lengkap (Complete)
+
+</div>
