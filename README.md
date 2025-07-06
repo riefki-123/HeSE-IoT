@@ -6,15 +6,15 @@ portal website yang telah kami buat dengan menggunakan algoritma YOLO
 1. Clone Proyek ini di Aplikasi Editor Code kesayangan anda
 '''bash
 git clone https://github.com/riefki-123/HeSE-IoT
-'''
+
 2. Kemudian buatlah sebuah env
 '''bash
 python -m venv env
-'''
+
 3. Setelah membuat env lanjut instalasi library yang sudah saya sediakan pada file requirements.txt
 '''bash
 pip install -r requirements.txt
-'''
+
 4. Karena ini menggunakan Algoritma YOLO pastikan anda sudah membuat train data YOLOv5 antara lain:
 - Helmet
 - No Helmet
